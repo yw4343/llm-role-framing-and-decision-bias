@@ -1,0 +1,8 @@
+{
+  "name": "llm-role-framing-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for LLM Role Framing Experiment",
+  "private": true,
+  "dependencies": {},
+  "scripts": {}
+}

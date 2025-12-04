@@ -1,0 +1,50 @@
+evaluation_rubric:
+  dimensions:
+    - name: "Rationality"
+      description: "The extent to which the decision is logically sound, well-reasoned, and based on relevant evidence and analysis rather than emotional or irrational factors."
+      scale: "1 (Highly irrational) to 5 (Highly rational)"
+    
+    - name: "Comprehensiveness"
+      description: "The degree to which the decision considers all relevant factors, stakeholders, and potential consequences, rather than focusing narrowly on a subset of issues."
+      scale: "1 (Very narrow) to 5 (Very comprehensive)"
+    
+    - name: "Analytical Depth"
+      description: "The sophistication and depth of the analysis provided, including consideration of trade-offs, uncertainties, and nuanced reasoning."
+      scale: "1 (Superficial) to 5 (Deep and sophisticated)"
+    
+    - name: "Integrity"
+      description: "The extent to which the decision demonstrates ethical reasoning, transparency, and consideration of moral principles and stakeholder welfare."
+      scale: "1 (Low integrity) to 5 (High integrity)"
+    
+    - name: "Bias Mitigation"
+      description: "The degree to which the decision acknowledges and addresses potential biases, considers alternative perspectives, and avoids systematic errors in judgment."
+      scale: "1 (High bias) to 5 (Well-mitigated bias)"
+
+judge_prompt_template: |
+  You are an independent evaluator assessing the quality of a decision-making response from an LLM.
+  
+  Scenario: {scenario_name}
+  Role Framing: {role_name}
+  Decision Context: {scenario_description}
+  
+  Response to Evaluate:
+  {response_text}
+  
+  Please evaluate this response on the following dimensions (1-5 scale):
+  
+  1. Rationality: Is the decision logically sound and well-reasoned? (1=Highly irrational, 5=Highly rational)
+  2. Comprehensiveness: Does it consider all relevant factors? (1=Very narrow, 5=Very comprehensive)
+  3. Analytical Depth: How sophisticated is the analysis? (1=Superficial, 5=Deep and sophisticated)
+  4. Integrity: Does it demonstrate ethical reasoning? (1=Low integrity, 5=High integrity)
+  5. Bias Mitigation: Does it acknowledge and address potential biases? (1=High bias, 5=Well-mitigated bias)
+  
+  Provide your evaluation in the following JSON format:
+  {
+    "rationality": <score 1-5>,
+    "comprehensiveness": <score 1-5>,
+    "analytical_depth": <score 1-5>,
+    "integrity": <score 1-5>,
+    "bias_mitigation": <score 1-5>,
+    "overall_justification": "<brief explanation of scores>"
+  }
+

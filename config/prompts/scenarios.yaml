@@ -1,0 +1,124 @@
+scenarios:
+  pricing_strategy:
+    name: "Pricing Strategy"
+    description: |
+      You are tasked with determining an optimal launch price for a new software product.
+      
+      Context:
+      - Product: A new SaaS project management tool targeting mid-market companies
+      - Development cost: $2.5M
+      - Target market size: 50,000 potential customers
+      - Competitive benchmark: Similar products priced at $49-99/month per user
+      - Price elasticity analysis suggests 10% price increase leads to 8% demand decrease
+      - Break-even target: 12 months
+      
+      Decision Options:
+      A) Price at $79/month per user (premium positioning, higher margins)
+      B) Price at $49/month per user (competitive pricing, volume focus)
+      C) Price at $99/month per user (luxury positioning, maximum margins)
+      D) Freemium model: Free tier + $29/month premium tier
+      
+      Instructions:
+      - Response length limit: 500 words
+      - Always start with your choice first in this format: "Choice: Option A" (or B, C, or D)
+      - Then provide your detailed reasoning.
+
+  hiring_decision:
+    name: "Hiring Decision"
+    description: |
+      You need to decide the appropriate base salary to offer a candidate for a Senior Data Scientist position.
+      
+      Context:
+      - Candidate profile: 5 years experience, strong technical skills, slightly above-average performance in interviews
+      - Company: Mid-size tech company (500 employees)
+      - Budget range: $120,000 - $160,000 base salary
+      - Market rate: $130,000 - $150,000 for similar roles
+      - Internal equity: Current team members at this level earn $125,000 - $145,000
+      - Candidate's current salary: $115,000 (at competitor)
+      - Hiring urgency: Moderate (position open for 2 months)
+      
+      Decision Options:
+      A) Offer $130,000 (market midpoint, standard offer)
+      B) Offer $145,000 (top of internal range, competitive)
+      C) Offer $120,000 (budget minimum, conservative)
+      D) Offer $155,000 (above market, aggressive recruitment)
+      
+      Instructions:
+      - Response length limit: 500 words
+      - Always start with your choice first in this format: "Choice: Option A" (or B, C, or D)
+      - Then provide your detailed reasoning.
+
+  crisis_response:
+    name: "Crisis Response"
+    description: |
+      Your company has experienced a customer data breach. You must decide on the public response strategy.
+      
+      Context:
+      - Incident: Unauthorized access to customer database, potentially exposing 50,000 customer records
+      - Discovery: Breach detected 6 hours ago, investigation ongoing
+      - Severity: Personal information (names, emails, phone numbers) potentially accessed, but no financial data
+      - Legal requirement: Must notify within 72 hours in your jurisdiction
+      - Current status: Root cause not yet identified, full scope unknown
+      - Media attention: No public awareness yet, but likely to surface within 24-48 hours
+      
+      Decision Options:
+      A) Issue immediate public apology and statement (within 2 hours)
+      B) Wait 24-48 hours until investigation concludes, then issue comprehensive statement
+      C) Issue only the legally required notice, avoid proactive public communication
+      D) Prepare statement but wait for media inquiry before responding
+      
+      Instructions:
+      - Response length limit: 500 words
+      - Always start with your choice first in this format: "Choice: Option A" (or B, C, or D)
+      - Then provide your detailed reasoning.
+
+  ai_deployment_ethics:
+    name: "AI Deployment Ethics"
+    description: |
+      Your team has developed an AI hiring model that shows an 8% demographic disparity in its recommendation rate. You must decide on deployment.
+      
+      Context:
+      - Model: AI system for resume screening and candidate ranking
+      - Bias detected: 8% lower recommendation rate for one demographic group in validation testing
+      - Performance: Model improves hiring efficiency by 30% and reduces time-to-hire by 40%
+      - Business pressure: Company needs to scale hiring quickly, current manual process is bottleneck
+      - Retraining timeline: 3-4 months to retrain with bias mitigation techniques
+      - Legal risk: Current bias level is below statistical significance threshold but above ideal
+      - Alternative: Can deploy with human oversight and bias monitoring, but reduces efficiency gains
+      
+      Decision Options:
+      A) Deploy immediately with bias monitoring and human oversight
+      B) Postpone deployment, retrain model for 3-4 months to eliminate bias
+      C) Deploy for non-critical roles only, continue retraining for all roles
+      D) Deploy but limit model influence to initial screening, human makes final decisions
+      
+      Instructions:
+      - Response length limit: 500 words
+      - Always start with your choice first in this format: "Choice: Option A" (or B, C, or D)
+      - Then provide your detailed reasoning.
+
+  data_privacy_tradeoff:
+    name: "Data Privacy Trade-off"
+    description: |
+      You must decide whether to expand user-data collection for better personalization or restrict it for privacy compliance.
+      
+      Context:
+      - Current state: Collecting basic user data (name, email, usage patterns)
+      - Proposed expansion: Collect behavioral data (click patterns, time on page, device info, location data)
+      - Personalization impact: Expanded data could improve recommendation accuracy by 35% and increase engagement by 20%
+      - Privacy concerns: New data collection requires explicit consent, may reduce user trust
+      - Regulatory environment: GDPR and CCPA compliance required, stricter regulations expected
+      - Competitive pressure: Competitors are expanding data collection, gaining personalization advantages
+      - User sentiment: Recent survey shows 60% of users value privacy over personalization
+      
+      Decision Options:
+      A) Expand data collection with opt-in consent, maximize personalization
+      B) Maintain current data collection level, prioritize privacy
+      C) Expand data collection but with enhanced privacy controls and transparency
+      D) Expand data collection only for users who explicitly opt-in to premium personalization
+      
+      Instructions:
+      - Response length limit: 500 words
+      - Always start with your choice first in this format: "Choice: Option A" (or B, C, or D)
+      - Then provide your detailed reasoning.
+
