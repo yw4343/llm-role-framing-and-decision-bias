@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: llm-role-framing-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/api_server.py $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: /api/experiments
+

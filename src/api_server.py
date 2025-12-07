@@ -414,10 +414,18 @@ def download_experiment(run_id):
 
 if __name__ == '__main__':
     import sys
-    # Try port 5001 first (5000 is often used by AirPlay on macOS)
-    port = 5001
-    if len(sys.argv) > 1:
+    # Get port from environment variable (for cloud platforms) or command line argument
+    port = os.environ.get('PORT')
+    if port:
+        port = int(port)
+    elif len(sys.argv) > 1:
         port = int(sys.argv[1])
+    else:
+        # Default port 5001 (5000 is often used by AirPlay on macOS)
+        port = 5001
+    
+    # Disable debug mode in production (when PORT is set by platform)
+    debug_mode = not bool(os.environ.get('PORT'))
     
     print("=" * 60)
     print("Starting Flask API Server")
@@ -425,12 +433,15 @@ if __name__ == '__main__':
     print(f"Server running on: http://localhost:{port}")
     print(f"API endpoint: http://localhost:{port}/api")
     print("=" * 60)
-    print("\nMake sure to keep this server running while using the frontend.")
-    print("If port 5001 is in use, you can specify a different port:")
-    print("  python src/api_server.py 5002\n")
+    if not debug_mode:
+        print("Running in production mode")
+    else:
+        print("\nMake sure to keep this server running while using the frontend.")
+        print("If port 5001 is in use, you can specify a different port:")
+        print("  python src/api_server.py 5002\n")
     
     try:
-        app.run(debug=True, port=port, host='0.0.0.0')
+        app.run(debug=debug_mode, port=port, host='0.0.0.0')
     except OSError as e:
         if "Address already in use" in str(e):
             print(f"\nError: Port {port} is already in use.")

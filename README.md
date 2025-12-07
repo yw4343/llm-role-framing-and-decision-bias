@@ -142,6 +142,18 @@ The project includes a web-based frontend for running experiments and visualizin
 - **Scenarios & Roles**: You can select specific scenarios and roles to test (applies to both response models)
 - **Troubleshooting**: If you see connection errors, ensure the backend server is running and the API URL matches your server port
 
+## Deployment
+
+Want to deploy the frontend and backend to the web? See **[DEPLOYMENT.md](DEPLOYMENT.md)** for step-by-step Render deployment instructions.
+
+### Quick Deploy to Render
+
+1. **Backend**: Deploy as a Web Service on Render (free tier available)
+2. **Frontend**: Deploy as a Static Site on Render
+3. **Configuration**: Update the API Base URL in the frontend to point to your backend
+
+The deployment guide includes detailed instructions for deploying both services to Render.
+
 ## API Configuration
 
 This project uses OpenRouter to access:
