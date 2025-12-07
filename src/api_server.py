@@ -15,10 +15,10 @@ project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
 from src.experiment_runner import ExperimentRunner
-from src.models.experiment import ExperimentRun, ExperimentResponse
+from src.models.experiment import ExperimentRun
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for React frontend
+CORS(app)  # Enable CORS for frontend
 
 # Store running experiments
 running_experiments = {}
