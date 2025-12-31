@@ -4,6 +4,8 @@
 
 This project investigates whether role framing—instructing an LLM to act as a particular professional identity—leads to cognitive bias and affects decision-making behavior in large language models.
 
+**View Demo:** https://llm-role-framing-frontend.onrender.com/
+
 ## Research Question
 
 Do LLMs exhibit systematic cognitive or decision biases when they are role-framed—for example, told to "act as a CEO" vs "act as an intern"? If so, how can such effects be mitigated?
